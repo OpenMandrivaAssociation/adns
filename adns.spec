@@ -49,7 +49,7 @@ following features:
 
 %package -n	%{libname}
 Group:		System/Libraries
-Summary:	Libraries needed to run applications using adns.
+Summary:	Libraries needed to run applications using adns
 
 %description -n	%{libname}
 adns is a resolver library for C (and C++) programs. In contrast with
