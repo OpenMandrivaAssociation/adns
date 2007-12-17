@@ -13,7 +13,6 @@ License:	GPL
 Source0:	ftp://ftp.chiark.greenend.org.uk/users/ian/adns/%{name}-%{version}.tar.bz2
 Group:		Networking/Other
 Requires: 	%{libname} = %{version}
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 
 %description
 adns is a resolver library for C (and C++) programs. In contrast with
