@@ -1,8 +1,9 @@
 %define	name	adns
 %define	version	1.3
-%define	release	%mkrel 3
+%define	release	%mkrel 4
 %define	major	1
 %define libname	%mklibname %{name} %{major}
+%define develname %mklibname %{name} -d
 
 Summary:	Advanced, easy to use, asynchronous-capable DNS client library
 Name:		%{name}
@@ -85,15 +86,15 @@ following features:
 
 This package contains all of adns libraries.
 
-%package -n	%{libname}-devel
+%package -n	%{develname}
 Summary:	Advanced, easy to use, asynchronous-capable DNS client library
 Group:		Development/C
 Requires:	%{libname} = %{version}
-Provides:	libadns-devel
-Provides:	adns-devel
-Obsoletes:	adns-devel
+Provides:	lib%{name}-devel = %{version}
+Provides:	%{name}-devel = %{version}
+Obsoletes:	%{libname}-devel
 
-%description -n	%{libname}-devel
+%description -n	%{develname}
 adns is a resolver library for C (and C++) programs. In contrast with
 the existing interfaces, gethostbyname et al and libresolv, it has the
 following features:
@@ -171,9 +172,9 @@ install -d %{buildroot}%{_libdir}
 
 %files -n %{libname}
 %defattr(-,root,root,755)
-%{_libdir}/*.so.*
+%{_libdir}/*.so.%{major}*
 
-%files -n %{libname}-devel
+%files -n %{develname}
 %defattr(-,root,root,0755)
 %{_includedir}/*
 %{_libdir}/*.so
