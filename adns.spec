@@ -1,6 +1,6 @@
 %define	name	adns
 %define	version	1.3
-%define	release	%mkrel 4
+%define	release	%mkrel 5
 %define	major	1
 %define libname	%mklibname %{name} %{major}
 %define develname %mklibname %{name} -d
