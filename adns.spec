@@ -1,20 +1,17 @@
-%define	name	adns
-%define	version	1.3
-%define	release	%mkrel 5
-%define	major	1
+%define	major 1
 %define libname	%mklibname %{name} %{major}
 %define develname %mklibname %{name} -d
 
 Summary:	Advanced, easy to use, asynchronous-capable DNS client library
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-URL:		http://www.chiark.greenend.org.uk/~ian/adns/
-License:	GPL
-Source0:	ftp://ftp.chiark.greenend.org.uk/users/ian/adns/%{name}-%{version}.tar.bz2
+Name:		adns
+Version:	1.4
+Release:	%mkrel 1
 Group:		Networking/Other
-Requires: 	%{libname} = %{version}
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
+License:	GPLv2+
+URL:		http://www.chiark.greenend.org.uk/~ian/adns/
+Source0:	ftp://ftp.chiark.greenend.org.uk/users/ian/adns/%{name}-%{version}.tar.bz2
+Requires: 	%{libname} = %{version}-%{release}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 adns is a resolver library for C (and C++) programs. In contrast with
@@ -48,7 +45,7 @@ following features:
       several are available. It has sensible handling of bad responses
       etc.
 
-%package -n	%{libname}
+%package -n %{libname}
 Group:		System/Libraries
 Summary:	Libraries needed to run applications using adns
 
@@ -86,13 +83,13 @@ following features:
 
 This package contains all of adns libraries.
 
-%package -n	%{develname}
+%package -n %{develname}
 Summary:	Advanced, easy to use, asynchronous-capable DNS client library
 Group:		Development/C
-Requires:	%{libname} = %{version}
-Provides:	lib%{name}-devel = %{version}
-Provides:	%{name}-devel = %{version}
-Obsoletes:	%{libname}-devel
+Requires:	%{libname} = %{version}-%{release}
+Provides:	lib%{name}-devel = %{version}-%{release}
+Provides:	%{name}-devel = %{version}-%{release}
+Obsoletes:	%{libname}-devel < 1.4
 
 %description -n	%{develname}
 adns is a resolver library for C (and C++) programs. In contrast with
