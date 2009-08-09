@@ -145,12 +145,6 @@ install -d %{buildroot}%{_libdir}
 
 %makeinstall
 
-#make prefix=$RPM_BUILD_ROOT%{_prefix} install
-(set -e
- cd %{buildroot}%{_libdir}
- ln -s libadns.so.? libadns.so
-)
- 
 %if %mdkversion < 200900
 %post -n %{libname} -p /sbin/ldconfig
 %endif
