@@ -5,7 +5,7 @@
 Summary:	Advanced, easy to use, asynchronous-capable DNS client library
 Name:		adns
 Version:	1.4
-Release:	%mkrel 2
+Release:	%mkrel 3
 Group:		Networking/Other
 License:	GPLv2+
 URL:		http://www.chiark.greenend.org.uk/~ian/adns/
@@ -138,10 +138,6 @@ perl -pi -e "/^lib_dir=/ and s,/lib,/%{_lib}," settings.make.in
 
 %install
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
-
-install -d %{buildroot}%{_bindir}
-install -d %{buildroot}%{_includedir}
-install -d %{buildroot}%{_libdir}
 
 %makeinstall
 
