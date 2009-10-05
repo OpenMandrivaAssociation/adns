@@ -5,11 +5,12 @@
 Summary:	Advanced, easy to use, asynchronous-capable DNS client library
 Name:		adns
 Version:	1.4
-Release:	%mkrel 3
+Release:	%mkrel 4
 Group:		Networking/Other
 License:	GPLv2+
 URL:		http://www.chiark.greenend.org.uk/~ian/adns/
 Source0:	ftp://ftp.chiark.greenend.org.uk/users/ian/adns/%{name}-%{version}.tar.bz2
+Source1:	README.Mandriva
 Requires: 	%{libname} = %{version}-%{release}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
@@ -130,6 +131,8 @@ This package contains static libraries and header files need for development.
 # make it lib64 aware
 perl -pi -e "/^lib_dir=/ and s,/lib,/%{_lib}," settings.make.in
 
+cp %{SOURCE1} README.Mandriva
+
 %build
 
 %configure2_5x
@@ -154,7 +157,7 @@ perl -pi -e "/^lib_dir=/ and s,/lib,/%{_lib}," settings.make.in
 
 %files
 %defattr(-,root,root,0755)
-%doc README TODO changelog
+%doc README TODO changelog README.Mandriva
 %{_bindir}/*
 
 %files -n %{libname}
@@ -166,5 +169,3 @@ perl -pi -e "/^lib_dir=/ and s,/lib,/%{_lib}," settings.make.in
 %{_includedir}/*
 %{_libdir}/*.so
 %{_libdir}/*.a
-
-
