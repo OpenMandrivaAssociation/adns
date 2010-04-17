@@ -134,26 +134,15 @@ perl -pi -e "/^lib_dir=/ and s,/lib,/%{_lib}," settings.make.in
 cp %{SOURCE1} README.Mandriva
 
 %build
-
 %configure2_5x
-
 %make
 
 %install
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
-
+rm -rf %{buildroot}
 %makeinstall
 
-%if %mdkversion < 200900
-%post -n %{libname} -p /sbin/ldconfig
-%endif
-
-%if %mdkversion < 200900
-%postun -n %{libname} -p /sbin/ldconfig
-%endif
-
 %clean
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,0755)
