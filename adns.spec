@@ -5,7 +5,7 @@
 Summary:	Advanced, easy to use, asynchronous-capable DNS client library
 Name:		adns
 Version:	1.4
-Release:	%mkrel 7
+Release:	%mkrel 8
 Group:		Networking/Other
 License:	GPLv2+
 URL:		http://www.chiark.greenend.org.uk/~ian/adns/
