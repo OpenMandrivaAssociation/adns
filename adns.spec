@@ -5,7 +5,7 @@
 Summary:	Advanced, easy to use, asynchronous-capable DNS client library
 Name:		adns
 Version:	1.4
-Release:	%mkrel 8
+Release:	%mkrel 10
 Group:		Networking/Other
 License:	GPLv2+
 URL:		http://www.chiark.greenend.org.uk/~ian/adns/
@@ -158,3 +158,92 @@ rm -rf %{buildroot}
 %{_includedir}/*
 %{_libdir}/*.so
 %{_libdir}/*.a
+
+
+%changelog
+* Mon May 02 2011 Oden Eriksson <oeriksson@mandriva.com> 1.4-8mdv2011.0
++ Revision: 662756
+- mass rebuild
+
+* Mon Nov 29 2010 Oden Eriksson <oeriksson@mandriva.com> 1.4-7mdv2011.0
++ Revision: 603173
+- rebuild
+
+  + Sandro Cazzaniga <kharec@mandriva.org>
+    - clean spec
+
+* Sun Mar 14 2010 Oden Eriksson <oeriksson@mandriva.com> 1.4-6mdv2010.1
++ Revision: 518984
+- rebuild
+
+  + Sandro Cazzaniga <kharec@mandriva.org>
+    - Rebuild for fix warning
+
+* Mon Oct 05 2009 Oden Eriksson <oeriksson@mandriva.com> 1.4-4mdv2010.0
++ Revision: 454169
+- document CVE-2008-1447 / CVE-2008-4100 poisoning vulnerability in README.Mandriva (suse)
+
+* Mon Aug 10 2009 Funda Wang <fwang@mandriva.org> 1.4-3mdv2010.0
++ Revision: 414151
+- fix install
+
+* Sun Aug 09 2009 Oden Eriksson <oeriksson@mandriva.com> 1.4-2mdv2010.0
++ Revision: 413546
+- fix build
+- rebuild
+
+* Tue Jan 20 2009 Tomasz Pawel Gajc <tpg@mandriva.org> 1.4-1mdv2009.1
++ Revision: 331487
+- update to new version 1.4
+ - spec file clean
+
+* Sat Dec 20 2008 Oden Eriksson <oeriksson@mandriva.com> 1.3-5mdv2009.1
++ Revision: 316490
+- rebuild
+
+* Mon Aug 25 2008 Emmanuel Andry <eandry@mandriva.org> 1.3-4mdv2009.0
++ Revision: 275946
+- apply devel policy
+- check major
+
+* Mon Jun 16 2008 Thierry Vignaud <tv@mandriva.org> 1.3-3mdv2009.0
++ Revision: 220346
+- rebuild
+
+  + Pixel <pixel@mandriva.com>
+    - do not call ldconfig in %%post/%%postun, it is now handled by filetriggers
+
+* Fri Jan 11 2008 Thierry Vignaud <tv@mandriva.org> 1.3-2mdv2008.1
++ Revision: 148428
+- rebuild
+- kill re-definition of %%buildroot on Pixel's request
+- fix summary-ended-with-dot
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+
+* Tue Aug 15 2006 Olivier Thauvin <nanardon@mandriva.org> 1.3-1mdv2007.0
++ Revision: 55883
+- 1.3
+- Import adns
+
+* Thu Dec 15 2005 Arnaud de Lorbeau <devel@mandriva.com> 1.1-5mdk
+- rebuild
+
+* Tue Oct 12 2004 Gwenole Beauchesne <gbeauchesne@mandrakesoft.com> 1.1-4mdk
+- merge lost fixes from 10.0-branch:
+  * lib64 fixes
+
+* Sun Jun 06 2004 Oden Eriksson <oeriksson@mandrakesoft.com> 1.1-3mdk
+- more spec file fixes (forgot to run rpmlint...)
+
+* Sun Jun 06 2004 Oden Eriksson <oeriksson@mandrakesoft.com> 1.1-2mdk
+- rebuilt against new deps and with gcc v3.4.x
+- use the %%configure2_5x macro
+- added P0
+- misc spec file fixes
+
+* Thu Apr 29 2004 Arnaud de Lorbeau <adelorbeau@mandrakesoft.com> 1.1-1mdk
+- new release
+
