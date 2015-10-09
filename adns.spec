@@ -1,11 +1,11 @@
 %define	major 1
 %define libname	%mklibname %{name} %{major}
 %define devname %mklibname %{name} -d
-
+%define _disable_lto 1
 Summary:	Advanced, easy to use, asynchronous-capable DNS client library
 Name:		adns
-Version:	1.4
-Release:	20
+Version:	1.5.0
+Release:	1
 Group:		Networking/Other
 License:	GPLv2+
 Url:		http://www.chiark.greenend.org.uk/~ian/adns/
