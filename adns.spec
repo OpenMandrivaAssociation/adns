@@ -4,13 +4,13 @@
 %define _disable_lto 1
 Summary:	Advanced, easy to use, asynchronous-capable DNS client library
 Name:		adns
-Version:	1.5.1
+Version:	1.6.0
 Release:	1
 Group:		Networking/Other
 License:	GPLv2+
 Url:		http://www.chiark.greenend.org.uk/~ian/adns/
-Source0:	ftp://ftp.chiark.greenend.org.uk/users/ian/adns/%{name}-%{version}.tar.gz
-Source1:	ftp://ftp.chiark.greenend.org.uk/users/ian/adns/%{name}-%{version}.tar.gz.sig
+Source0:	http://www.chiark.greenend.org.uk/~ian/adns/ftp/adns-%{version}.tar.gz
+Source1:	http://www.chiark.greenend.org.uk/~ian/adns/ftp/adns-%{version}.tar.gz.sig
 Source2:	README.Mandriva
 
 %description
