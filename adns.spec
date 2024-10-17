@@ -8,7 +8,7 @@ Version:	1.6.1
 Release:	1
 Group:		Networking/Other
 License:	GPLv2+
-Url:		http://www.chiark.greenend.org.uk/~ian/adns/
+Url:		https://www.chiark.greenend.org.uk/~ian/adns/
 Source0:	http://www.chiark.greenend.org.uk/~ian/adns/ftp/adns-%{version}.tar.gz
 Source1:	http://www.chiark.greenend.org.uk/~ian/adns/ftp/adns-%{version}.tar.gz.sig
 Source2:	README.Mandriva
