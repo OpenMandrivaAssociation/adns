@@ -13,6 +13,11 @@ Source0:	http://www.chiark.greenend.org.uk/~ian/adns/ftp/adns-%{version}.tar.gz
 Source1:	http://www.chiark.greenend.org.uk/~ian/adns/ftp/adns-%{version}.tar.gz.sig
 Source2:	README.Mandriva
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 adns is a resolver library for C (and C++) programs. In contrast with
 the existing interfaces, gethostbyname et al and libresolv, it has the
