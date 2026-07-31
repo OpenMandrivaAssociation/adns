@@ -4,7 +4,7 @@
 %define _disable_lto 1
 Summary:	Advanced, easy to use, asynchronous-capable DNS client library
 Name:		adns
-Version:	1.6.1
+Version:	1.6.2
 Release:	1
 Group:		Networking/Other
 License:	GPLv2+
