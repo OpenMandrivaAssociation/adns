@@ -10,8 +10,7 @@ Group:		Networking/Other
 License:	GPLv2+
 Url:		https://www.chiark.greenend.org.uk/~ian/adns/
 Source0:	http://www.chiark.greenend.org.uk/~ian/adns/ftp/adns-%{version}.tar.gz
-Source1:	http://www.chiark.greenend.org.uk/~ian/adns/ftp/adns-%{version}.tar.gz.sig
-Source2:	README.Mandriva
+Source1:	README.Mandriva
 
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -71,7 +70,7 @@ This package contains static libraries and header files need for development.
 # make it lib64 aware
 sed -i -e "/^lib_dir=/ and s,/lib,/%{_lib}," settings.make.in
 
-cp %{SOURCE2} README.Mandriva
+cp %{SOURCE1} README.Mandriva
 
 %build
 %configure2_5x \
